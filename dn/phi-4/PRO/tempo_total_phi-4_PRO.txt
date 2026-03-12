@@ -1,0 +1,9 @@
+TEMPOS DE EXECUÇÃO - MODEL: phi-4 | TYPE: PRO
+
+Prompt few1_simples: 812.4 segundos
+Prompt few2_simples: 1099.83 segundos
+Prompt few3_simples: 889.62 segundos
+Prompt few_simples: 808.73 segundos
+
+-------------------------------------------------
+Tempo TOTAL para todos os prompts: 3610.64 segundos

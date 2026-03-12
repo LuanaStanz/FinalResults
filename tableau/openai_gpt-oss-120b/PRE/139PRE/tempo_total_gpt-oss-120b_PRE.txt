@@ -1,0 +1,13 @@
+TEMPOS DE EXECUÇÃO - MODEL: gpt-oss-120b | TYPE: PRE
+
+Prompt zero_simples: 8355.03 segundos
+Prompt zero_completo: 6264.79 segundos
+Prompt few1_simples: 7558.33 segundos
+Prompt few2_simples: 7335.97 segundos
+Prompt few3_simples: 7394.47 segundos
+Prompt few1_completo: 5609.98 segundos
+Prompt few2_completo: 5591.41 segundos
+Prompt few3_completo: 5495.75 segundos
+
+-------------------------------------------------
+Tempo TOTAL para todos os prompts: 53605.83 segundos

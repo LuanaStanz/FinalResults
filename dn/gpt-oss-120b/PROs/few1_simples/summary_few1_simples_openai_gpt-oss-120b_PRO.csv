@@ -1,0 +1,6 @@
+Type of answer,Count,Percentage,
+Errors found,194,46.75,
+Wrong theorem proved,3,0.72,"Lines: 397,400,410"
+Unexpected format,0,0,
+Correct,218,52.53,
+Total time in seconds,16269.47,,
