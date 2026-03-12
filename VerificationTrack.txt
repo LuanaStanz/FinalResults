@@ -1,0 +1,103 @@
+Checklist para cada arquivo:
+PASSO 1:  Verificar se o prompt do arq está certo
+PASSO 2:  Verificar se todas as questões foram rodadas
+    1. só 1 começo '|-~(A|B)->(~A&~B)' ou 'Ax (P(x)|P(x)) |- Ax P(x)'
+    2. retirar questões invalidas caso tenham sido rodadas
+      234:A->B, (~A|C) |- (B|C)
+      243:(~A->B), (~B->C) |- (~A->C) 
+      266:A -> B, ~(B -> C) |- A & ~C
+      272:A -> B, B -> C |- A -> D
+PS part1: os 272/276 começa com |- ~(A|B)->(~A&~B) termina com A -> (B&C), ~C |- ~A | ~B
+PS: entre s 2 pode faltar:
+      273: A|B,A->C,B->C|-C
+      274: A->B,B->(C&D),C->E|-A->E
+      275:~(A|B)|-~A
+      276: A->(B&C),~C|-~A
+PS part2: os 139 começa com A|B,A->(C&D),B->(E&D)|-D termina com (A|B)->(C&D),A,C|D|-(C&D)&(C&D)
+PASSO 3:  Verificar erros de request (contabilizar quantidade de context lenght e timeouts nos resultados tb)
+PASSO 4:  Verificar 'formula errada provada' (verificação humana é essencial pq o algortmo nÃo permite nenhuma diferenças). Caso 'formula errada provada' nÃo for verdade mudar para o formato do caso 'sucesso'.  
+PASSO 5:  Adicionar resumo dos resultados dos arquivos no 'tempo_total_{model_name}.txt' de cada modelo e no geral.
+PASSO 6:  Tirar os 5 few-shots dos resultados estatisticos finais (adicionar se está certo ou não)   
+PASSO 7:  Atualizar lista do status dos arquivos
+
+LISTA DE ARQUIVOS:
+gpt 120b
+DN/PRO/0_simples
+        OK 187/415 = 45.06%
+        PS: ajeitar 38 'Demonstração do teorema errado...' (387,409 errado mesmo)   
+
+DN/PRO/1_simples
+        OK 218/415= 52.53%
+        PS: ajeitar 45 'Demonstração do teorema errado...' (397,400,410 errado mesmo)
+
+DN/PRO/2_simples
+        OK 259/415= 62.41
+        PS: ajeitar 55 'Demonstração do teorema errado...' (NENHUMA errado mesmo)
+DN/PRO/3_simples
+        OK 238/415= 57,35%
+        PS: TO CHECK 50
+DN/PRO/5_simples
+        OK 183+53=236/415=56,87%
+        PS: TO CHECK 53
+        
+DN/PRO/0_complexo
+        11/117=9,3
+DN/PRO/1_complexo
+DN/PRO/2_complexo
+DN/PRO/3_complexo
+        OK 220+57=277/415=66,75%
+DN/PRO/5_complexo
+        OK 216+56=272/415=65,54%
+
+DN/PRE/0_simples
+        3/117 = 2,56%
+DN/PRE/1_simples
+
+DN/PRE/2_simples
+DN/PRE/3_simples
+DN/PRE/5_simples
+        25/117=21,37%
+        PS: ajeitar 1 'Demonstração do teorema errado...' (nenhuma errado mesmo)
+DN/PRE/0_complexo
+        21/117= 17,95%
+        PS: ajeitar 1 'Demonstração do teorema errado...' (87 errado mesmo)
+DN/PRE/1_complexo 
+        37/117=31,62
+DN/PRE/2_complexo
+DN/PRE/3_complexo
+DN/PRE/5_complexo
+        'ERROR' 1 context lenght of 8000
+        37/117= 31,9%
+---------------------------------------------------
+LISTA DO QUE FALTA RODAR:
+- 
+- 
+- 
+---------------------------------------------------
+EXEMPLOS FEW_SHOT USADOS: 
+------------------------------------------------------
+ANITA
+°124: (A | B) & (A | C) |- A | (B & C)                                             
+°103: |- (~A -> B) -> ((~A -> ~B) -> A)                                           
+°137: ~(~A | ~B) |- A & B                                                 
+°117: ~B -> ~A |- A -> B                                    
+°122: ~A | ~B |- ~(A & B)  
+
+°6: Ex P(x), Ax (P(x)->Q(x)) |- Ex Q(x)                             
+Ax (P(x)|P(x)) |- Ax P(x)                                  
+|- Ex (D(x)&K(x))->(Ex D(x)|Ex K(x))                       
+Ax ~(P(x)&~Q(x)), Ax ~Q(x) |- Ax ~P(x)        
+|- Ex P(x)->~Ax ~P(x)      
+------------------------------------------------------
+NADIA
+6°	(A->B)&(~A->B) |- B
+24°	A|B |- (~A->B)&(~B->A)
+74°	~(A&B) |- ~A|~B
+88°     ~S->~R, (P&Q)|R, ~S->~Q |- ~P|S      
+122°    ~A|~B|-~(A&B)          
+
+27°    |- (P->Ex Q(x))->Ex (P->Q(x))               
+52°    Ax ((P(x)->Q(x))&(Q(x)->P(x))) |- Ax ((~P(x)->~Q(x))&(~Q(x)->~P(x)))
+32°    Ax Ey (P(x)|Q(y)) |- Ey Ax (P(x)|Q(y))                                  
+24°    |- Ax (P(x)|Q)->(Ax P(x)|Q)                     
+39°    Ax (~H(x)|M(x)), Ex H(x) |- Ex M(x)
