@@ -1,6 +1,6 @@
 Type of answer,Count,Percentage
-Errors found,335.0,80.72
-Wrong theorem proved,21.0,5.06
+Errors found,328.0,79.04
+Wrong theorem proved,26.0,6.27
 Unexpected format,0.0,0.0
-Correct,59.0,14.22
-Total time in seconds,639.06,
+Correct,61.0,14.7
+Total time in seconds,504.72,
