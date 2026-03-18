@@ -1,0 +1,7 @@
+TEMPOS DE EXECUÇÃO - MODEL: openai_gpt-oss-20b | TYPE: PRE
+
+Prompt few_simples: 541.5 segundos
+Prompt few_completo: 547.14 segundos
+
+-------------------------------------------------
+Tempo TOTAL para todos os prompts: 1088.67 segundos
