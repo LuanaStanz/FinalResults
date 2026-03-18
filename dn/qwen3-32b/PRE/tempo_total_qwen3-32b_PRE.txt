@@ -1,10 +1,21 @@
 TEMPOS DE EXECUÇÃO - MODEL: qwen3-32b | TYPE: PRE
 
-Prompt zero_completo: 5185.43 segundos
-Prompt few1_completo: 4638.53 segundos
-Prompt few2_completo: 4412.82 segundos
-Prompt few3_completo: 4511.66 segundos
-Prompt few_completo: 3862.5 segundos
+Prompt few1_simples: 65309.21 segundos
+Prompt few2_simples: 41702.26 segundos
+Prompt few2_simples: 43802.33 segundos
 
 -------------------------------------------------
-Tempo TOTAL para todos os prompts: 22611.03 segundos
+Tempo TOTAL para todos os prompts: 150814.15 segundos
+TEMPOS DE EXECUÇÃO - MODEL: qwen3-32b | TYPE: PRE
+
+Prompt few3_simples: 44804.31 segundos
+
+-------------------------------------------------
+Tempo TOTAL para todos os prompts: 44804.38 segundos
+TEMPOS DE EXECUÇÃO - MODEL: qwen3-32b | TYPE: PRE
+
+Prompt few_simples: 38817.78 segundos
+Prompt few_completo: 41898.93 segundos
+
+-------------------------------------------------
+Tempo TOTAL para todos os prompts: 80716.76 segundos
