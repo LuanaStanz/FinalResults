@@ -1,0 +1,7 @@
+TEMPOS DE EXECUÇÃO - MODEL: qwen3-32b | TYPE: PRO
+
+Prompt few_simples: 12699.67 segundos
+Prompt few_completo: 11168.25 segundos
+
+-------------------------------------------------
+Tempo TOTAL para todos os prompts: 23868.0 segundos
