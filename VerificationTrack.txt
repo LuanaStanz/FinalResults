@@ -69,6 +69,285 @@ DN/PRE/5_complexo
         'ERROR' 1 context lenght of 8000
         37/117= 31,9%
 ---------------------------------------------------
+mistral-small-3.2-24b-instruct-2506
+essas questões realmente não foram rodadas no prompt
+234:A->B, (~A|C) |- (B|C)
+243:(~A->B), (~B->C) |- (~A->C) 
+266:A -> B, ~(B -> C) |- A & ~C
+272:A -> B, B -> C |- A -> D
+ficou faltando rodar as questões em alguns prompts: 
+275:~(A|B)|-~A
+276: A->(B&C),~C|-~A
+
+DN/PRO/0_simples   
+context length - 0
+timeouts - 0  
+Total time in seconds:	659.87
+OK 2/412= 0.48%
+
+DN/PRO/1_simples
+context length - 0
+timeouts - 0  
+Total time in seconds:	650.63
+OK 42/395= 10.14%
+
+DN/PRO/2_simples
+context length - 0
+timeouts - 0  
+Total time in seconds:	504.72	
+OK 61/389= 14.7%
+
+DN/PRO/3_simples
+context length - 0
+timeouts - 0
+Total time in seconds:	810.98
+OK 69/395= 16.63%
+
+DN/PRO/5_simples
+context length - 0
+timeouts - 0
+Total time in seconds:	607.83
+OK 65/392= 15.7%
+
+
+DN/PRO/0_completo
+falta o arquivo 
+
+DN/PRO/1_completo
+falta o arquivo 
+
+DN/PRO/2_completo
+context length - 0
+timeouts - 0
+Total time in seconds:	522.17
+OK 63/393= 15.18% 
+
+DN/PRO/3_completo
+falta o arquivo
+
+DN/PRO/5_completo
+falta o arquivo
+
+DN/PRE/0_simples
+falta o arquivo  
+
+DN/PRE/1_simples
+falta o arquivo 
+
+DN/PRE/2_simples
+falta o arquivo 
+
+DN/PRE/3_simples
+falta o arquivo 
+
+DN/PRE/5_simples
+falta o arquivo  
+
+DN/PRE/0_completo
+context length - 0
+timeouts - 0  
+Total time in seconds:	229.1
+OK 2/116= 1.72% 
+
+DN/PRE/1_completo 
+context length - 0
+timeouts - 0  
+Total time in seconds:	284.48
+OK 12/114= 10.53% 
+
+DN/PRE/2_completo
+context length - 0
+timeouts - 0  
+Total time in seconds:	202.84
+OK 20/114= 17.09% 
+
+DN/PRE/3_completo
+context length - 0
+timeouts - 0  
+Total time in seconds:	249.87
+OK 21/117= 17.95% 
+
+DN/PRE/5_completo
+context length - 0
+timeouts - 0 
+Total time in seconds:	209.38
+OK 26/117= 22.22% 
+
+-------------
+
+gpt 120b
+Tableau/PRO/0_simples
+context length - 0
+timeouts - 0         
+
+Tableau/PRO/1_simples
+context length - 0
+timeouts - 0          
+
+Tableau/PRO/2_simples
+context length - 0
+timeouts - 0   
+
+Tableau/PRO/3_simples    
+   
+
+Tableau/PRO/0_completo
+ 
+
+Tableau/PRO/1_completo
+ 
+
+Tableau/PRO/2_completo
+
+
+Tableau/PRO/3_completo
+        
+
+Tableau/PRE/0_simples
+
+
+Tableau/PRE/1_simples
+context length - 0
+timeouts - 0 
+
+Tableau/PRE/2_simples
+
+Tableau/PRE/3_simples
+context length - 0
+timeouts - 0  
+
+Tableau/PRE/0_completo
+context length - 6
+timeouts - 0  
+
+Tableau/PRE/1_completo 
+context length - 6
+timeouts - 0 
+
+Tableau/PRE/2_completo
+context length - 3
+timeouts - 0 
+
+Tableau/PRE/3_completo
+context length - 0
+timeouts - 0 
+-------
+gpt 120b
+Tableau/PRO/0_simples
+context length - 0
+timeouts - 0         
+
+Tableau/PRO/1_simples
+context length - 0
+timeouts - 0          
+
+Tableau/PRO/2_simples
+context length - 0
+timeouts - 0   
+
+Tableau/PRO/3_simples    
+   
+
+Tableau/PRO/0_completo
+ 
+
+Tableau/PRO/1_completo
+
+
+Tableau/PRO/2_completo
+ 
+
+Tableau/PRO/3_completo
+        
+
+Tableau/PRE/0_simples
+
+
+Tableau/PRE/1_simples
+context length - 0
+timeouts - 0 
+
+Tableau/PRE/2_simples
+
+
+Tableau/PRE/3_simples
+context length - 0
+timeouts - 0  
+
+Tableau/PRE/0_completo
+context length - 12
+timeouts - 0  
+
+Tableau/PRE/1_completo 
+context length - 6
+timeouts - 0 
+
+Tableau/PRE/2_completo
+context length - 3
+timeouts - 0 
+
+Tableau/PRE/3_completo
+context length - 0
+timeouts - 0 
+-------
+273_mistral-small-3.2-24b-instruct-2506
+60
+Tableau/PRO/0_simples
+context length - 0
+timeouts - 0         
+
+Tableau/PRO/1_simples
+context length - 0
+timeouts - 0          
+
+Tableau/PRO/2_simples
+ 
+
+Tableau/PRO/3_simples    
+ 
+
+Tableau/PRO/0_completo 60
+context length - 0
+timeouts - 0
+
+Tableau/PRO/1_completo
+
+
+Tableau/PRO/2_completo
+ 
+
+Tableau/PRO/3_completo
+      
+
+Tableau/PRE/0_simples
+
+
+Tableau/PRE/1_simples
+context length - 0
+timeouts - 0 
+
+Tableau/PRE/2_simples
+
+
+Tableau/PRE/3_simples
+context length - 0
+timeouts - 0  
+
+Tableau/PRE/0_completo
+context length - 0
+timeouts - 0  
+
+Tableau/PRE/1_completo 
+context length - 0
+timeouts - 0 
+
+Tableau/PRE/2_completo
+context length - 0
+timeouts - 0 
+
+Tableau/PRE/3_completo
+context length - 0
+timeouts - 0 
 LISTA DO QUE FALTA RODAR:
 - 
 - 
