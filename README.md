@@ -10,13 +10,100 @@ This directory contains the experimental results obtained from evaluating Large 
 
 ```text
 .
+├── datasets
 ├── DNprompt.py          # Prompt templates for Natural Deduction experiments
 ├── TBprompt.py          # Prompt templates for Analytic Tableau experiments
-├── README.md
 ├── natural_deduction/   # Experimental results for Natural Deduction
 └── tableau/             # Experimental results for Analytic Tableau
 ```
 
+# Dataset
+
+The complete datasets used are provided in `pro_dataset.txt` and `pre_dataset.txt`. For each proof system, **5 problems from each dataset are reserved as few-shot demonstrations** and are therefore not included in the accuracy evaluation. Consequently, each proof system is evaluated on:
+
+| Logic                    | Original Dataset | Few-Shot Demonstrations | Evaluation Set |
+| ------------------------ | ---------------: | ----------------------: | -------------: |
+| Propositional Logic (PL) |              411 |                       5 |        **406** |
+| First-Order Logic (FOL)  |              117 |                       5 |        **112** |
+|                          |                  |                         |                |
+
+The few-shot demonstrations are excluded from evaluation because they are explicitly provided to the models as examples during prompting.
+
+## Natural Deduction
+
+For the **Natural Deduction (DN)** experiments, the following problems are reserved as few-shot demonstrations and are therefore excluded from the natural deduction tables count for the accuracy calculation.
+
+### Propositional Logic
+
+```text
+(A->B)&(~A->B)|-B 
+A|B|-(~A->B)&(~B->A)
+~(A&B)|-~A|~B 
+~A->~B,(C&D)|B,~A->~D|-~C|A 
+~(A->~B)|-A&B 
+```
+
+### First-Order Logic
+
+```text
+|- (B->Ex C(x))->Ex (B->C(x)) 
+Ax ((B(x)->C(x))&(C(x)->B(x))) |- Ax ((~B(x)->~C(x))&(~C(x)->~B(x))) 
+Ax Ey (B(x)|C(y)) |- Ey Ax (B(x)|C(y)) 
+|- Ax (B(x)|C)->(Ax B(x)|C) 
+Ax (~B(x)|C(x)), Ex B(x) |- Ex C(x) 
+```
+
+## Analytic Tableau
+
+For the **Analytic Tableau (TB)** experiments, the following problems are reserved as few-shot demonstrations and are therefore excluded from the natural deduction tables count for the accuracy calculation.
+
+### Propositional Logic
+
+```text
+(A|B)&(A|C)|-A|(B&C) 
+|-(~A->B)->((~A->~B)->A) 
+~(~A|~B)|-A&B 
+~A->~B|-B->A
+~A|~B|-~(A&B)
+```
+
+### First-Order Logic
+
+```text
+Ex B(x), Ax (B(x)->C(x)) |- Ex C(x) 
+Ax (B(x)|B(x)) |- Ax B(x) 
+|- Ex (B(x)|C(x))->(Ex B(x)|Ex C(x))
+Ax ~(B(x)&~C(x)), Ax ~C(x) |- Ax ~B(x) 
+|- Ex B(x)->~Ax ~B(x)
+```
+---
+---
+
+# Verifiers and Proof Assistants
+
+The experiments reported in this article use two formal verification tools:
+- **NADIA** — used for **Natural Deduction** proofs.
+- **NADIA rules description:** [(https://github.com/daviromero/nadia/blob/main/ND-Rules.pdf)]
+- **ANITA** — used for **Analytic Tableau** proofs.
+- **ANITA rules description:** https://github.com/daviromero/anita/blob/main/AT-Rules.pdf
+Both tools use syntax inspired by the **Fitch-style notation**, a widely adopted representation for formal proofs. They automatically verify whether a generated proof satisfies the rules of the corresponding deductive system and provide information about errors when a proof is not valid.
+
+The notation accepted by both follows the compact syntax used throughout the datasets. The correspondence between standard logical notation and NADIA/ANITA notation is summarized below.
+
+| Standard Symbol | NADIA/ANITA Notation | Meaning |
+|-----------------|----------------|---------|
+| $\neg$          | `~`            | Negation |
+| $\land$         | `&`            | Conjunction |
+| $\lor$          | `\|`           | Disjunction |
+| $\rightarrow$   | `->`           | Implication |
+| $\forall x$     | `Ax`           | Universal quantifier |
+| $\exists x$     | `Ex`           | Existential quantifier |
+| $\bot$          | `@`            | Contradiction / falsum |
+| $\vdash$        | `\|-`          | Derivation / entailment |
+| Premise         | `pre`          | Premise |
+| Hypothesis      | `hip`          | Temporary hypothesis |
+
+---
 ### Folder Description
 - **dn/**
   - Contains all experimental outputs related to the Natural Deduction proof system.
