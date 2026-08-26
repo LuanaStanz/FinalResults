@@ -1,0 +1,10 @@
+TEMPOS DE EXECUÇÃO - MODEL: mistral-small-3.2-24b-instruct-2506 | TYPE: PRO
+
+Prompt zero_completo: 736.54 segundos
+Prompt few1_completo: 695.17 segundos
+Prompt few2_completo: 553.67 segundos
+Prompt few3_completo: 683.81 segundos
+Prompt few_completo: 745.78 segundos
+
+-------------------------------------------------
+Tempo TOTAL para todos os prompts: 3415.08 segundos

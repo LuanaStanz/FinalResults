@@ -1,7 +1,0 @@
-TEMPOS DE EXECUÇÃO - MODEL: openai_gpt-oss-20b | TYPE: PRO
-
-Prompt few2_simples: 942.4 segundos
-Prompt few2_completo: 884.04 segundos
-
--------------------------------------------------
-Tempo TOTAL para todos os prompts: 1826.57 segundos
