@@ -10,11 +10,24 @@ This directory contains the experimental results obtained from evaluating Large 
 
 ```text
 .
-├── datasets
-├── DNprompt.py          # Prompt templates for Natural Deduction experiments
-├── TBprompt.py          # Prompt templates for Analytic Tableau experiments
-├── natural_deduction/   # Experimental results for Natural Deduction
-└── tableau/             # Experimental results for Analytic Tableau
+├── datasets/                  # Datasets used in the experiments + some solutions for the datasets in the .json files
+│
+├── prompts/                   # Prompt templates used for each reasoning method
+│   ├── prompt_dn.py           # Prompts for Natural Deduction
+│   └── prompt_tb.py           # Prompts for Analytic Tableau
+│
+└── results/                   # Experimental results
+    ├── accuracy_tables/       # Tables with accuracy measurements
+    │
+    ├── dn/                    # Natural Deduction results
+    │   └── <model_name>/
+    │       ├── pro/           # Results using the propositional logic
+    │       └── pre/           # Results using the FOL ('predicate') logic
+    │
+    └── tb/                    # Analytic Tableau results
+        └── <model_name>/
+            ├── pro/           # Results using the propositional logic
+            └── pre/           # Results using the FOL ('predicate') logic
 ```
 
 # Dataset
